@@ -23,8 +23,8 @@ Route::resource('/categories', 'CategoryController');
 * Products we can use also "resource" like categories if we follow the protocol but 
 * I do this with the basic structure to see that works in the same way
 */
-Route::get('/products', 'ProducController@index');
-Route::post('/products', 'ProducController@store');
-Route::get('/products/{product}', 'ProducController@show');
-Route::put('/products/{product}', 'ProducController@update');
-Route::delete('/products/{delete}', 'ProducController@destroy');
+Route::get('/products', 'ProductController@index');
+Route::post('/products', 'ProductController@store');
+Route::get('/products/{product}', 'ProductController@show');
+Route::put('/products/{product}', 'ProductController@update');
+Route::delete('/products/{delete}', 'ProductController@destroy');
