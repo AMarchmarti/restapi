@@ -17,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 Route::resource('/categories', 'CategoryController');
+/*
+* Products we can use also "resource" like categories if we follow the protocol but 
+* I do this with the basic structure to see that works in the same way
+*/
 Route::get('/products', 'ProducController@index');
 Route::post('/products', 'ProducController@store');
 Route::get('/products/{product}', 'ProducController@show');
